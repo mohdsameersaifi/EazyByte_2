@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2 class="logo">InventorySys</h2>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="reports.html" class="active">Reports</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Reports</h1>
+                <div class="user-profile">
+                    <img src="user.png" alt="User Profile">
+                    <span>Admin</span>
+                </div>
+            </header>
+
+            <section class="reports-management">
+                <h2>Generate Reports</h2>
+                <form id="report-form">
+                    <label for="report-type">Report Type:</label>
+                    <select id="report-type">
+                        <option value="sales">Sales Report</option>
+                        <option value="inventory">Inventory Report</option>
+                        <option value="orders">Orders Report</option>
+                    </select>
+
+                    <label for="date-range">Date Range:</label>
+                    <input type="date" id="start-date" placeholder="Start Date" required>
+                    <input type="date" id="end-date" placeholder="End Date" required>
+
+                    <button type="submit" class="btn">Generate Report</button>
+                </form>
+
+                <div id="report-results">
+                    <!-- Report results will be displayed here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="reports.js"></script>
+</body>
+</html>
